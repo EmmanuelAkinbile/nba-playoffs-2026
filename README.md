@@ -32,15 +32,25 @@ The dashboard is organized across four pages, each targeting a distinct analytic
 ### Page 1 — Playoff Picture
 High-level snapshot of the current state of the playoffs. KPI cards display total games played, teams remaining, current round, and average margin of victory. A series tracker shows current matchups and series leaders. The Latest Games table logs recent results in real time. Supporting visuals include a Top 10 Playoff Scorers horizontal bar chart and a Teams by Points treemap showing cumulative scoring output per team.
 
+![Playoff Picture](assets/playoff_picture.png)
+
 ### Page 2 — Team Overview
 Cross-filters by conference, team, and round. Six KPI cards surface aggregate metrics: Regular Season PPG, Playoff PPG, Regular Season Pace, Playoff Pace, Playoff RPG, and Playoff APG. A dual bar chart compares Regular vs. Playoff scoring for each team side by side. A scatter plot maps each team's offensive rating against their defensive rating, visually segmenting efficient teams from inefficient ones. A detailed table below shows regular season wins, win percentage, PPG, and pace for each playoff team.
+
+![Team Overview](assets/team_overview.png)
 
 ### Page 3 — Player Analysis
 Cross-filters by team, round, position, and role (Role Player / Star). A bubble scatter chart plots average playoff points against age, with bubble size representing scoring volume and colour distinguishing role players from stars. A bar chart breaks down Playoff PPG by position (G, F, C). A detailed player table lists every player's age, years in league, and full playoff stat line — PPG, FG%, RPG, APG, SPG, and BPG.
 
+![Player Analysis](assets/player_analysis.png)
+
 ### Page 4 — The Supporting Cast
 The focal page of the project. A stacked bar chart shows each team's scoring split between role player points and star points, surfacing which teams are the most dependent on their supporting cast vs. their stars. A ranked table lists the top role players by Playoff PPG alongside their Regular Season PPG, highlighting over- and under-performers. A donut chart shows the league-wide bench vs. starter scoring split (74.5% starters, 25.5% bench). A bar chart breaks down average Playoff PPG by experience level — Veteran, Seasoned Veteran, Early Career, Sophomore, and Rookie.
 
+![The Supporting Cast](assets/supporting_cast.png)
+
+
+🔗 [View the live Power BI dashboard](#) *(link to be added after publish)*
 ---
 
 ## Key Insights
@@ -150,6 +160,11 @@ nba-playoffs-2026/
 │   ├── fetch_stats.py               # Player game stats + playoff aggregates
 │   ├── fetch_team_standings.py
 │   └── fetch_team_stats.py
+├── assets/
+|   ├── playoff_picture.png
+|   ├── team_overview.png
+|   ├── player_analysis.png
+|   ├── supporting_cast.png
 ├── run_pipeline.py                  # Orchestrator — runs all scripts in sequence
 ├── requirements.txt
 ├── .env.example
@@ -207,12 +222,6 @@ Static tables are populated on first run and skipped on all subsequent runs. Pla
 **Regular season context is static.** Regular season stats and standings are loaded once at pipeline setup and not updated during the playoffs. Comparative metrics (e.g. Playoff PPG vs. Regular Season PPG) use end-of-season regular season figures as the baseline, which is the appropriate benchmark for playoff performance analysis.
 
 **Data source dependency.** The pipeline depends entirely on the unofficial `nba_api` library. Any changes to the underlying NBA Stats website structure could break data retrieval without notice.
-
----
-
-## Live Dashboard
-
-🔗 [View the live Power BI dashboard](#) *(link to be added after publish)*
 
 ---
 
