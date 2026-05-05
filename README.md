@@ -50,7 +50,7 @@ The focal page of the project. A stacked bar chart shows each team's scoring spl
 ![The Supporting Cast](assets/supporting_cast.png)
 
 
-🔗 [View the live Power BI dashboard](#) *(link to be added after publish)*
+🔗 [View the live Power BI dashboard](https://app.powerbi.com/reportEmbed?reportId=a852adec-7dea-442d-9ca5-9e9f3443fdfd&autoAuth=true&ctid=76ae1115-1efc-4af2-a536-e2b2443af1a0)
 ---
 
 ## Key Insights
