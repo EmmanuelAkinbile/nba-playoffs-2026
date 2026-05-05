@@ -152,23 +152,25 @@ The pipeline runs daily via **Windows Task Scheduler**, which calls `run_pipelin
 ```
 nba-playoffs-2026/
 ├── src/
-│   ├── config.py                    # Database connection config
-│   ├── db.py                        # SQLAlchemy engine + upsert utility
-│   ├── fetch_teams.py
-│   ├── fetch_players.py
 │   ├── fetch_games.py
-│   ├── fetch_stats.py               # Player game stats + playoff aggregates
+│   ├── fetch_players.py
+│   ├── fetch_stats.py
 │   ├── fetch_team_standings.py
-│   └── fetch_team_stats.py
+│   ├── fetch_team_stats.py
+│   ├── fetch_teams.py
+│   └── update_allstar.py
 ├── assets/
-|   ├── playoff_picture.png
-|   ├── team_overview.png
-|   ├── player_analysis.png
-|   ├── supporting_cast.png
-├── run_pipeline.py                  # Orchestrator — runs all scripts in sequence
-├── requirements.txt
-├── .env.example
+│   ├── playoff_picture.png
+│   ├── team_overview.png
+│   ├── player_analysis.png
+│   ├── supporting_cast.png
+│   └── NBA_Playoffs_2026_Dashboard.pbix
+├── config.py
+├── db.py
+├── run_pipeline.py
 ├── .gitignore
+├── .env.example
+├── LICENSE
 └── README.md
 ```
 
